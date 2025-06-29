@@ -138,7 +138,7 @@ FROM cohort_analysis
 WHERE orderdate = first_purchase_date 
 GROUP BY 
 	cohort_year
-```
+``` 
 📈 **Visualizations:**
 
 🐍 Analysis Notebook: [2_cohort_analysis.ipynb](analysis/2_cohort_analysis.ipynb)
