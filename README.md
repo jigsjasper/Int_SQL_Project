@@ -1,14 +1,14 @@
 # SQL PROJECT - Sales Analysis
 
 ## Overview
-Analysis of customer behavior, retention, and lifetime value for an e-commerce company to improve customer retention and maximize revenue.
+This project analyzes customer behavior, retention, and lifetime value (LTV) for an e-commerce company. The goal is to uncover actionable insights to improve retention and maximize revenue.
 
 ## Business Questions
 1. **Customer Segmentation:** Who are our most valuable customers?
 2. **Cohort Analysis:** How do different customers generate revenue?
 3. **Rentention Analysis:** Which customers haven't purchased recently?
 
-## Cleaning Up the Data
+## Data Preparation & Cleaning
 - Aggregated sales and customer data into revenue metrics
 - Calculated first purchase dates for cohort analysis
 - Created view combining transactions and customer details
@@ -56,11 +56,11 @@ FROM
 
 ## Analysis Approach
 
-### 1. Customer Segmentation Analysis
+### 1️⃣ Customer Segmentation Analysis
 - Categorized customers based on total lifetime
 value (LTV)
 - Assigned customers to High, Mid, and Low-value segments
-- Calculated key metrics: total revenue
+- Calculated key metrics: total revenue, customer counts, average LTV
 
 🖥️ Query: [1_customer_segmentation.sql](/1_customer_segmentation.sql)
 
@@ -121,7 +121,7 @@ of revenue ($135.4M)
 $66.6M → $135.4M revenue opportunity
 - Low-Value (2% revenue): Design re-engagement campaigns and price-sensitive promotions to increase purchase frequency
 
-### 2. Cohort Analysis
+### 2️⃣ Cohort Analysis
 - Tracked revenue and customer count per cohorts.
 - Cohorts were grouped by year of first purchase.
 - Analyzed customer retention at a cohort level.
@@ -155,10 +155,10 @@ GROUP BY
 - In 2023 we saw a drop in number of customers acquired, which is concerning.
 - With both lowering LTV and decreasing customer acquisition, the company is facing a potential revenue decline.
 
-### 3. Retention Analysis
+### 3️⃣ Retention Analysis
 - Identified customers at risk of churning
-- Analyzed last purchase patterns
-- Calculated customer-specific metrics
+- Labeled customers as Active or Churned (no purchase in the past 6 months)
+- Calculated customer-specific metrics, Analyzed churn by cohort
 
 🖥️ Query: [3_retention_analysis.sql](/3_retention_analysis.sql)
 
@@ -215,10 +215,38 @@ GROUP BY cohort_year, customer_status
 - Re-engage high-value churned customers by focusing on targeted win-back campaigns rather than broad retention efforts, as reactivating valuable users may yield higher ROI.
 - Predict & preempt churn risk and use customer-specific warning indicators to proactively intervene with at-risk users before they lapse.
 
-## Strategic Rcommendations
+## 🎯 Strategic Recommendations
+
+✨ **Develop a premium membership program**  
+Offer exclusive perks and loyalty benefits to top customers to reinforce their engagement and increase retention.
+
+🎯 **Personalize promotions for mid-value customers**  
+Use targeted incentives and tailored communication to encourage mid-tier customers to upgrade their purchasing behavior.
+
+🔄 **Re-engage churned customers**  
+Design focused win-back campaigns to bring high-value lapsed customers back to active status.
+
+📉 **Investigate declining customer lifetime value**  
+Analyze why recent cohorts are generating lower LTV and implement strategies to reverse this trend.
+
+🚀 **Enhance onboarding and loyalty programs**  
+Introduce improved onboarding experiences and early-stage incentives to boost first-year retention rates.
+
 
 
 ## Technical Details
+
 - **Database:** PostgreSQL
-- **Analysis Tools:** PostgreSQL, Dbeaver, PGadmin
-- **Visualization:** Colab Notebook
+
+- **Tools:**
+  - PostgreSQL (SQL)
+  - DBeaver, PGAdmin (Database IDEs)
+  - Python (Data Analysis in Colab Notebooks)
+
+- **Skills Demonstrated:**
+  - Data cleaning and transformation
+  - Window functions and aggregation
+  - Cohort and segmentation analysis
+  - Customer retention modeling
+  - Data visualization and storytelling
+
