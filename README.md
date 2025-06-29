@@ -220,5 +220,5 @@ GROUP BY cohort_year, customer_status
 
 ## Technical Details
 - **Database:** PostgreSQL
-- **Analysis Tools:** PostgreSQL, Dbeaver
+- **Analysis Tools:** PostgreSQL, Dbeaver, PGadmin
 - **Visualization:** Colab Notebook
