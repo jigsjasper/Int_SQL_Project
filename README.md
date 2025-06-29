@@ -1,4 +1,4 @@
-# SQL PROJECT - Sales Analysis
+# SQL PROJECT - Sales Analysis 
 
 ## Overview
 This project analyzes customer behavior, retention, and lifetime value (LTV) for an e-commerce company. The goal is to uncover actionable insights to improve retention and maximize revenue.
